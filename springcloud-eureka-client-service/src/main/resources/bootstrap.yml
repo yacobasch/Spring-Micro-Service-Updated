@@ -1,0 +1,53 @@
+# Items that apply to ALL profiles:
+# Before using this profile add latest bootstrap dependency on POM
+# The bootstrap yaml file relates the active profile set to the application name
+# which in return used in the remote config repo together with the active prifile
+# set to retrieve the corresponding properties
+---
+# Remote profiles retrieved by config server
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8001	# Expect the Spring Cloud Config server to be running on localhost, port 8001.  
+
+server:
+  port: ${PORT:${SERVER_PORT:0}} # Select any available port if neither port nor server port are specified.
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}} #Unique Id for each instances
+
+#Commented just to access it through the config server from Remote Repo - Git
+---
+spring:
+  profiles: sentence
+  application:
+    name: client-sentence
+server:
+  port: 8020
+
+---
+spring:
+  profiles: subject
+  application:
+    name: client-subject
+---
+spring:
+  profiles: verb
+  application:
+    name: client-verb
+---
+spring:
+  profiles: article
+  application:
+    name: client-article
+---
+spring:
+  profiles: adjective
+  application:
+    name: client-adjective
+---
+spring:
+  profiles: noun
+  application:
+    name: client-noun

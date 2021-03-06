@@ -1,0 +1,14 @@
+server:
+  port: 8001
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yacobasch/spring-cloud-clients-config.git
+          username: ya.tsegaye@gmail.com
+          password: eMRtY08XXYDK
+          default-label: main
+          force-pull: true
+management:  endpoint:    features:      enabled: true
+  endpoints:    jmx:      exposure:        include:        - "*"

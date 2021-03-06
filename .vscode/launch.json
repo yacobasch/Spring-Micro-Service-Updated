@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringcloudConfigServerApplication<springcloud-config-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.nyala.webapp.SpringcloudConfigServerApplication",
+            "projectName": "springcloud-config-server",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringcloudEurekaClientApplication<springcloud-eureka-client>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.nyala.webapp.SpringcloudEurekaClientApplication",
+            "projectName": "springcloud-eureka-client",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringcloudEurekaServerApplication<springcloud-eureka-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.nyala.webapp.SpringcloudEurekaServerApplication",
+            "projectName": "springcloud-eureka-server",
+            "args": ""
+        }
+    ]
+}
